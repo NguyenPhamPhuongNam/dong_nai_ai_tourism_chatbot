@@ -1,0 +1,16 @@
+{
+  "name": "dong-nai-ai-tourism-chatbot",
+  "version": "1.0.0",
+  "description": "Chatbot du lich Dong Nai mo rong dung Gemini API qua Google AI Studio",
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo \"Static site ready\""
+  },
+  "dependencies": {
+    "@google/genai": "latest"
+  },
+  "devDependencies": {
+    "netlify-cli": "latest"
+  }
+}

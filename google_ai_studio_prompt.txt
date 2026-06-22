@@ -1,0 +1,5 @@
+Hãy tạo một ứng dụng web chatbot du lịch tên "Đồng Nai Travel AI" dùng Gemini API. Ứng dụng cần hỗ trợ: giới thiệu địa phương, gợi ý điểm tham quan, gợi ý ẩm thực, gợi ý lưu trú, gợi ý lịch trình du lịch.
+
+Dữ liệu điểm đến: Văn Miếu Trấn Biên, Khu du lịch Bửu Long, Sơn Tiên - The Amazing Bay, Thác Giang Điền, Công viên Suối Mơ, Vườn quốc gia Cát Tiên, Hồ Trị An, Đảo Ó - Đồng Trường, Núi Chứa Chan, Núi Bà Rá, Sóc Bom Bo, Vườn quốc gia Bù Gia Mập.
+
+Yêu cầu: trả lời tiếng Việt, không bịa giá vé/giờ mở cửa/số điện thoại, nhắc kiểm tra nguồn chính thức, deploy Netlify, dùng GEMINI_API_KEY trong environment variables, không lộ API key ở client.

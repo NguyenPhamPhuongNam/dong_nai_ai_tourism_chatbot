@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Đồng Nai Travel AI</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div class="hero__copy">
+        <p class="eyebrow">Google AI Studio + Gemini API</p>
+        <h1>Đồng Nai Travel AI</h1>
+        <p class="subtitle">Trợ lý du lịch cho Đồng Nai mở rộng: Biên Hòa, Cát Tiên, Hồ Trị An và vùng Bình Phước cũ.</p>
+        <div class="hero__badges"><span>Điểm tham quan</span><span>Ẩm thực</span><span>Lưu trú</span><span>Lịch trình</span></div>
+      </div>
+      <div class="hero__card"><strong>Gợi ý nhanh</strong><p>Hỏi: “Lập lịch trình 2 ngày 1 đêm cho nhóm bạn thích thiên nhiên và chụp ảnh”.</p></div>
+    </header>
+    <main class="layout">
+      <section class="panel info-panel">
+        <h2>Chức năng bắt buộc</h2>
+        <div class="feature-grid">
+          <button data-prompt="Giới thiệu tổng quan về du lịch Đồng Nai mở rộng, gồm cả vùng Bình Phước cũ.">Giới thiệu địa phương</button>
+          <button data-prompt="Gợi ý các điểm tham quan tiêu biểu ở Đồng Nai mở rộng, chia theo văn hóa, sinh thái, vui chơi và nghỉ dưỡng.">Gợi ý điểm tham quan</button>
+          <button data-prompt="Gợi ý các món ăn, đặc sản nên thử khi du lịch Đồng Nai mở rộng.">Gợi ý ẩm thực</button>
+          <button data-prompt="Gợi ý khu vực lưu trú phù hợp khi đi Đồng Nai 1 ngày, 2 ngày và 3 ngày.">Gợi ý lưu trú</button>
+          <button data-prompt="Lập lịch trình du lịch Đồng Nai mở rộng 3 ngày 2 đêm, có Biên Hòa, Cát Tiên, Hồ Trị An, Núi Bà Rá, Sóc Bom Bo và Bù Gia Mập.">Gợi ý lịch trình</button>
+        </div>
+        <h2>Dữ liệu điểm đến</h2>
+        <ul class="destination-list">
+          <li>Văn Miếu Trấn Biên, Khu du lịch Bửu Long, Sơn Tiên - The Amazing Bay</li>
+          <li>Thác Giang Điền, Công viên Suối Mơ, Vườn quốc gia Cát Tiên</li>
+          <li>Hồ Trị An, Đảo Ó - Đồng Trường, Núi Chứa Chan</li>
+          <li>Núi Bà Rá, Sóc Bom Bo, Vườn quốc gia Bù Gia Mập</li>
+        </ul>
+        <div class="notice"><strong>Lưu ý:</strong> Giá vé, giờ mở cửa và số điện thoại lưu trú có thể thay đổi. Chatbot sẽ nhắc người dùng kiểm tra nguồn chính thức trước chuyến đi.</div>
+      </section>
+      <section class="panel chat-panel">
+        <div id="chatLog" class="chat-log" aria-live="polite"></div>
+        <form id="chatForm" class="chat-form">
+          <textarea id="userInput" rows="3" placeholder="Nhập câu hỏi du lịch của bạn... Ví dụ: Gợi ý lịch trình 2 ngày 1 đêm cho gia đình có trẻ nhỏ."></textarea>
+          <button type="submit" id="sendBtn">Gửi</button>
+        </form>
+      </section>
+    </main>
+    <footer><p>Nguồn tham khảo gợi ý: Google Earth, Google Maps, Cổng thông tin điện tử Đồng Nai, website chính thức các điểm du lịch và các nguồn hình ảnh đã trích dẫn trong báo cáo.</p></footer>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
