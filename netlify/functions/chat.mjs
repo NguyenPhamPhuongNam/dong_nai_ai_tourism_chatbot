@@ -20,6 +20,6 @@ export const handler = async (event) => {
   if(!message) return jsonResponse(400,{error:'Bạn chưa nhập câu hỏi.'});
   const historyText=history.map(item=>`${item.role==='assistant'?'Trợ lý':'Người dùng'}: ${item.content}`).join('\n');
   const prompt=`${LOCAL_GUIDE}\n\nLịch sử trò chuyện gần đây:\n${historyText}\n\nCâu hỏi mới của người dùng:\n${message}\n\nHãy trả lời hữu ích, có cấu trúc rõ. Nếu phù hợp, dùng gạch đầu dòng ngắn hoặc bảng nhỏ.`;
-  try{const ai=new GoogleGenAI({apiKey}); const response=await ai.models.generateContent({model:'gemini-3.5-flash', contents:prompt}); return jsonResponse(200,{reply:response.text||'Xin lỗi, tôi chưa tạo được câu trả lời.'})}
+  try{const ai=new GoogleGenAI({apiKey}); const response=await ai.models.generateContent({model: "gemini-2.5-flash", contents:prompt}); return jsonResponse(200,{reply:response.text||'Xin lỗi, tôi chưa tạo được câu trả lời.'})}
   catch(error){return jsonResponse(500,{error:error.message||'Lỗi khi gọi Gemini API.'})}
 };
