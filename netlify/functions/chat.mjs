@@ -84,6 +84,19 @@ function isTemporaryGeminiError(error) {
   );
 }
 
+function isSkippableModelError(error) {
+  const message = String(error?.message || error || "");
+
+  return (
+    isTemporaryGeminiError(error) ||
+    message.includes("model") ||
+    message.includes("not found") ||
+    message.includes("NOT_FOUND") ||
+    message.includes("not supported") ||
+    message.includes("unsupported")
+  );
+}
+
 function makeFriendlyError(error) {
   const message = String(error?.message || error || "");
 
@@ -131,7 +144,7 @@ async function generateWithFallback(ai, prompt) {
       } catch (error) {
         lastError = error;
 
-        if (!isTemporaryGeminiError(error)) {
+        if (!isSkippableModelError(error)) {
           throw error;
         }
 
